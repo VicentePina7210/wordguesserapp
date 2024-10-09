@@ -38,5 +38,5 @@ RSpec.configure do |config|
     stub_request(:post, "http://randomword.saasbook.info/RandomWord").to_return(:body => "foobar")
   end
   config.color = true
-  config.filter_run_excluding pending: true # this avoids excessive pending examples output
+#  config.filter_run_excluding pending: true # this avoids excessive pending examples output
 end
