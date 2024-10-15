@@ -40,7 +40,7 @@ def check_win_or_lose
   elsif @wrong_guesses.length >= 7
     :lose
   else
-    :play
+    :play 
   end
 end
 
