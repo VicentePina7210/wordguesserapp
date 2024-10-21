@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Wordguesser: a scaffolded (!) ESaaS getting-started assignment
 =============================================================
 
@@ -55,3 +56,6 @@ Contents
 * Part 5: [Corner Cases](docs/part_5_corner_cases.md)
 * Part 6: [Conclusion](docs/part_6_conclusion.md)
 * Part 7: [Optional Challenge Assignment](docs/part_7_optional_challenge.md)
+=======
+# wordguesserapp
+>>>>>>> 11b609d0419ed09d037f83ba50c9e8fde5927090
