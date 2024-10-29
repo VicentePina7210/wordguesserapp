@@ -27,6 +27,7 @@ class WordGuesserApp < Sinatra::Base
     word = params[:word] || WordGuesserGame.get_random_word
     @game = WordGuesserGame.new(word)
     redirect '/show'
+    
   end
   
   post '/guess' do
