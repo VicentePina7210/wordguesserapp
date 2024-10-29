@@ -30,24 +30,27 @@ class WordGuesserApp < Sinatra::Base
   end
   
   post '/guess' do
-    letter = params[:guess].to_s[0]
-    ### YOUR CODE HERE ### 
-    redirect '/show'
+    letter = params[:guess].to_s[0] || ''  # Extract the first character or an empty string
+    @game.guess(letter) if letter.length > 0  # Call the guess method only if a letter is provided
+    redirect '/show'  # Redirect to the show action to display the result
   end
+  
   
   get '/show' do
-    ### YOUR CODE HERE ###
-    erb :show # You may change/remove this line
+    # Display the game status
+    @wrong_guesses = @game.wrong_guesses
+    @word_with_guesses = @game.word_with_guesses
+    erb :show
   end
   
+  
   get '/win' do
-    ### YOUR CODE HERE ###
-    erb :win # You may change/remove this line
+    erb :win
   end
   
   get '/lose' do
-    ### YOUR CODE HERE ###
-    erb :lose # You may change/remove this line
+    erb :lose
   end
+  
   
 end
